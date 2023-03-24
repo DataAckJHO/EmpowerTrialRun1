@@ -49,6 +49,7 @@ dd/mm/2023	1.0.0.1		XXX, Skyline	Initial version
 ****************************************************************************
 */
 
+using Empower.Library.RoomTest;
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Core.DataMinerSystem.Automation;
 
@@ -71,5 +72,8 @@ public class Script
 		{
 			engine.GenerateInformation($"Element Name = {element.Name}");
 		}
+
+		var order = OrderFactory.CreateOrder("Order 1");
+		order.Dispatch("Jelle Hoorne");
 	}
 }
